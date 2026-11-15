@@ -1,0 +1,752 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#c9e8ff">
+<title>MISS UNIVERSE 2026 | SHOW THE COUNTRY POWER</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --blue: #c9e8ff;
+  --blue-light: #eaf7ff;
+  --blue-dark: #183d64;
+  --gold: #d6a83e;
+  --gold-light: #fff0b5;
+  --gold-dark: #8d641b;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--blue-dark);
+  font-family: 'Montserrat', sans-serif;
+  background:
+    radial-gradient(circle at 50% 5%, #ffffff 0, transparent 35%),
+    linear-gradient(145deg, #e9f7ff, #b9ddf8 55%, #d9efff);
+  overflow-x: hidden;
+}
+
+.page {
+  width: min(100%, 850px);
+  margin: auto;
+  padding: 22px 15px 35px;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  padding: 12px 0 25px;
+}
+
+.logo-wrap {
+  width: 112px;
+  height: 112px;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: logoSpin 13s linear infinite;
+  filter: drop-shadow(0 5px 9px #527da855);
+}
+
+.logo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+@keyframes logoSpin {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(360deg); }
+}
+
+.main-title {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(27px, 6vw, 43px);
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #153d68;
+  text-shadow: 0 2px 0 white, 0 5px 12px #547fa844;
+}
+
+.subtitle {
+  margin-top: 8px;
+  font-family: 'Cinzel', serif;
+  font-size: clamp(13px, 3vw, 19px);
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #a47724;
+}
+
+.section-title {
+  margin: 19px auto 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-family: 'Cinzel', serif;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #214e79;
+}
+
+.section-title::before,
+.section-title::after {
+  content: "";
+  width: 48px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold));
+}
+
+.section-title::after {
+  transform: rotate(180deg);
+}
+
+/* TOP 1 FEATURE */
+.featured {
+  width: min(100%, 430px);
+  margin: 0 auto 38px;
+  text-align: center;
+  padding: 20px 15px 24px;
+  border: 1px solid #d6b45e;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #ffffffd9, #e8f6ffdd);
+  box-shadow: 0 12px 30px #456d9222;
+  position: relative;
+}
+
+.featured::before {
+  content: "✦";
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  color: var(--gold);
+  font-size: 18px;
+}
+
+.featured::after {
+  content: "✦";
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: var(--gold);
+  font-size: 18px;
+}
+
+.feature-label {
+  font-family: 'Cinzel', serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #9a7024;
+  margin-bottom: 15px;
+}
+
+.photo-frame {
+  position: relative;
+  padding: 6px;
+  border-radius: 12px;
+  background:
+    linear-gradient(135deg,
+      #fff4bd 0%,
+      #bd8b2b 15%,
+      #fff0a8 30%,
+      #a87520 48%,
+      #fff1ae 65%,
+      #bd8b2b 82%,
+      #fff4bd 100%);
+  box-shadow:
+    0 0 0 1px #fff8d8,
+    0 5px 15px #80602255;
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 7px;
+  background: #dceeff;
+}
+
+.featured .photo-frame {
+  width: min(100%, 290px);
+  aspect-ratio: 4 / 5;
+  margin: auto;
+}
+
+.contestant-name {
+  margin-top: 17px;
+  font-family: 'Cinzel', serif;
+  font-size: clamp(19px, 4vw, 25px);
+  font-weight: 800;
+  color: #173e67;
+  line-height: 1.35;
+}
+
+.country-name {
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #a47724;
+  text-transform: uppercase;
+}
+
+/* DECORATIVE LAUREL RANK */
+.rank-decoration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  color: #b7862b;
+}
+
+.rank-number {
+  font-family: 'Cinzel', serif;
+  font-size: 29px;
+  line-height: 1;
+  font-weight: 800;
+  color: #a87922;
+  text-shadow: 0 1px 0 #fff5c5;
+}
+
+.laurel {
+  width: 43px;
+  height: 35px;
+  position: relative;
+}
+
+.laurel.left {
+  transform: scaleX(-1);
+}
+
+.laurel span {
+  position: absolute;
+  width: 11px;
+  height: 5px;
+  background: linear-gradient(90deg, #9a6a1c, #f8dc80);
+  border-radius: 100% 0 100% 0;
+  transform: rotate(-35deg);
+  box-shadow: 0 1px 2px #7d571c44;
+}
+
+.laurel span:nth-child(1) { left: 4px; top: 24px; transform: rotate(-12deg); }
+.laurel span:nth-child(2) { left: 9px; top: 16px; transform: rotate(-30deg); }
+.laurel span:nth-child(3) { left: 17px; top: 9px; transform: rotate(-43deg); }
+.laurel span:nth-child(4) { left: 27px; top: 4px; transform: rotate(-58deg); }
+.laurel span:nth-child(5) { left: 2px; top: 31px; transform: rotate(15deg); }
+
+/* OTHER CONTESTANTS */
+.contestants {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.contestant-card {
+  display: grid;
+  grid-template-columns: minmax(125px, 185px) 1fr;
+  align-items: center;
+  gap: 18px;
+  padding: 13px;
+  border-radius: 15px;
+  border: 1px solid #d8b65f;
+  background: linear-gradient(120deg, #ffffffed, #e9f6ffed);
+  box-shadow: 0 7px 19px #456d921c;
+  min-width: 0;
+}
+
+.contestant-card .photo-frame {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+}
+
+.contestant-card .contestant-name {
+  margin-top: 0;
+  font-size: clamp(15px, 3.4vw, 21px);
+  overflow-wrap: anywhere;
+}
+
+.contestant-card .country-name {
+  font-size: 11px;
+  letter-spacing: 2px;
+  line-height: 1.6;
+}
+
+.contestant-card .rank-decoration {
+  justify-content: flex-start;
+  margin-top: 14px;
+  gap: 7px;
+}
+
+.contestant-card .rank-number {
+  font-size: 24px;
+}
+
+.contestant-card .laurel {
+  width: 34px;
+  transform: scale(.85);
+  transform-origin: left center;
+}
+
+.contestant-card .laurel.left {
+  transform: scaleX(-1) scale(.85);
+  transform-origin: right center;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  margin-top: 42px;
+  padding: 25px 10px 10px;
+  border-top: 1px solid #c5a24f;
+}
+
+.footer-title {
+  font-family: 'Cinzel', serif;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #234d75;
+}
+
+.tiktok-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: #986c20;
+  font-weight: 800;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.tiktok-link:hover {
+  text-decoration: underline;
+}
+
+.disclaimer {
+  max-width: 550px;
+  margin: 18px auto 0;
+  font-size: 10px;
+  line-height: 1.7;
+  color: #52708a;
+  letter-spacing: .5px;
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+  .page {
+    padding: 15px 10px 25px;
+  }
+
+  .logo-wrap {
+    width: 94px;
+    height: 94px;
+  }
+
+  .contestant-card {
+    grid-template-columns: minmax(112px, 42%) 1fr;
+    gap: 13px;
+    padding: 10px;
+  }
+
+  .contestant-card .contestant-name {
+    font-size: 15px;
+  }
+
+  .contestant-card .country-name {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+
+  .contestant-card .rank-number {
+    font-size: 22px;
+  }
+
+  .contestant-card .laurel {
+    transform: scale(.72);
+    transform-origin: left center;
+  }
+
+  .contestant-card .laurel.left {
+    transform: scaleX(-1) scale(.72);
+    transform-origin: right center;
+  }
+}
+
+@media (max-width: 340px) {
+  .contestant-card {
+    grid-template-columns: 105px 1fr;
+    gap: 10px;
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="page">
+
+  <header class="header">
+    <div class="logo-wrap">
+      <img
+        src="images/ad685dc2fa5cbfc5551ee9f32d6a374d.jpg"
+        alt="Miss Universe 75th Anniversary Logo"
+      >
+    </div>
+
+    <h1 class="main-title">MISS UNIVERSE 2026</h1>
+    <p class="subtitle">SHOW THE COUNTRY POWER</p>
+  </header>
+
+  <h2 class="section-title">TOP 12 CONTESTANTS</h2>
+
+  <!-- TOP 1 : PUERTO RICO -->
+  <section class="featured">
+    <p class="feature-label">NO. 1</p>
+
+    <div class="photo-frame">
+      <img
+        src="images/Screenshot_2026-11-15-13-41-01-315_com.ss.android.ugc.trill-edit.jpg"
+        alt="Jennifer Barreto - Puerto Rico"
+      >
+    </div>
+
+    <h2 class="contestant-name">Jennifer Barreto</h2>
+    <p class="country-name">Puerto Rico</p>
+
+    <div class="rank-decoration" aria-label="Rank 1">
+      <div class="laurel left">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <span class="rank-number">1</span>
+      <div class="laurel">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOP 2 - TOP 12 -->
+  <main class="contestants">
+
+    <!-- TOP 2 : PHILIPPINES -->
+    <article class="contestant-card">
+      <div>
+        <div class="photo-frame">
+          <img
+            src="images/Screenshot_2026-11-15-13-47-01-193_com.ss.android.ugc.trill-edit.jpg"
+            alt="Bea Millan-Windorski - Philippines"
+            loading="lazy"
+          >
+        </div>
+        <div class="rank-decoration" aria-label="Rank 2">
+          <div class="laurel left">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <span class="rank-number">2</span>
+          <div class="laurel">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 class="contestant-name">Bea Millan-Windorski</h3>
+        <p class="country-name">Philippines</p>
+      </div>
+    </article>
+
+    <!-- TOP 3 : MYANMAR -->
+    <article class="contestant-card">
+      <div>
+        <div class="photo-frame">
+          <img
+            src="images/Screenshot_2026-11-15-13-57-42-413_com.ss.android.ugc.trill-edit.jpg"
+            alt="May Grace Parry - Myanmar"
+            loading="lazy"
+          >
+        </div>
+        <div class="rank-decoration" aria-label="Rank 3">
+          <div class="laurel left">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <span class="rank-number">3</span>
+          <div class="laurel">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 class="contestant-name">May Grace Parry</h3>
+        <p class="country-name">Myanmar</p>
+      </div>
+    </article>
+
+    <!-- TOP 4 : NICARAGUA -->
+    <article class="contestant-card">
+      <div>
+        <div class="photo-frame">
+          <img
+            src="images/Screenshot_2026-11-15-13-44-40-831_com.ss.android.ugc.trill-edit.jpg"
+            alt="Jasmine Blandford - Nicaragua"
+            loading="lazy"
+          >
+        </div>
+        <div class="rank-decoration" aria-label="Rank 4">
+          <div class="laurel left">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <span class="rank-number">4</span>
+          <div class="laurel">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 class="contestant-name">Jasmine Blandford</h3>
+        <p class="country-name">Nicaragua</p>
+      </div>
+    </article>
+
+    <!-- TOP 5 : CHILE -->
+    <article class="contestant-card">
+      <div>
+        <div class="photo-frame">
+          <img
+            src="images/Screenshot_2026-11-15-13-40-45-487_com.ss.android.ugc.trill-edit.jpg"
+            alt="Dominga López - Chile"
+            loading="lazy"
+          >
+        </div>
+        <div class="rank-decoration" aria-label="Rank 5">
+          <div class="laurel left">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <span class="rank-number">5</span>
+          <div class="laurel">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 class="contestant-name">Dominga López</h3>
+        <p class="country-name">Chile</p>
+      </div>
+    </article>
+
+    <!-- TOP 6 : VENEZUELA -->
+    <article class="contestant-card">
+      <div>
+        <div class="photo-frame">
+          <img
+            src="images/Screenshot_2026-11-15-13-44-07-628_com.ss.android.ugc.trill-edit.jpg"
+            alt="Clara Vegas - Venezuela"
+            loading="lazy"
+          >
+        </div>
+        <div class="rank-decoration" aria-label="Rank 6">
+          <div class="laurel left">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <span class="rank-number">6</span>
+          <div class="laurel">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 class="contestant-name">Clara Vegas</h3>
+        <p class="country-name">Venezuela</p>
+      </div>
+    </article>
+
+    <!-- TOP 7 : COLOMBIA -->
+    <article class="contestant-card">
+      <div>
+        <div class="photo-frame">
+          <img
+            src="images/Screenshot_2026-11-15-13-44-21-292_com.ss.android.ugc.trill-edit.jpg"
+            alt="María Alejandra López - Colombia"
+            loading="lazy"
+          >
+        </div>
+        <div class="rank-decoration" aria-label="Rank 7">
+          <div class="laurel left">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <span class="rank-number">7</span>
+          <div class="laurel">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 class="contestant-name">María Alejandra López</h3>
+        <p class="country-name">Colombia</p>
+      </div>
+    </article>
+
+    <!-- TOP 8 : SOUTH KOREA -->
+    <article class="contestant-card">
+      <div>
+        <div class="photo-frame">
+          <img
+            src="images/849909549_18634461097019091_7766203816739460501_n.jpg"
+            alt="Yurim Kim - South Korea"
+            loading="lazy"
+          >
+        </div>
+        <div class="rank-decoration" aria-label="Rank 8">
+          <div class="laurel left">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <span class="rank-number">8</span>
+          <div class="laurel">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 class="contestant-name">Yurim Kim</h3>
+        <p class="country-name">South Korea</p>
+      </div>
+    </article>
+
+    <!-- TOP 9 : INDIA -->
+    <article class="contestant-card">
+      <div>
+        <div class="photo-frame">
+          <img
+            src="images/851829770_18001782252010190_6875537044585990220_n.webp"
+            alt="Kaziah Liz Mejo - India"
+            loading="lazy"
+          >
+        </div>
+        <div class="rank-decoration" aria-label="Rank 9">
+          <div class="laurel left">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <span class="rank-number">9</span>
+          <div class="laurel">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 class="contestant-name">Kaziah Liz Mejo</h3>
+        <p class="country-name">India</p>
+      </div>
+    </article>
+
+    <!-- TOP 10 : SPAIN -->
+    <article class="contestant-card">
+      <div>
+        <div class="photo-frame">
+          <img
+            src="images/Screenshot_2026-11-15-13-54-59-675_com.ss.android.ugc.trill-edit.jpg"
+            alt="Susana Medina - Spain"
+            loading="lazy"
+          >
+        </div>
+        <div class="rank-decoration" aria-label="Rank 10">
+          <div class="laurel left">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <span class="rank-number">10</span>
+          <div class="laurel">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 class="contestant-name">Susana Medina</h3>
+        <p class="country-name">Spain</p>
+      </div>
+    </article>
+
+    <!-- TOP 11 : CUBA -->
+    <article class="contestant-card">
+      <div>
+        <div class="photo-frame">
+          <img
+            src="images/853266393_18640443697001203_6669157874646115890_n.jpg"
+            alt="Mia Donadio - Cuba"
+            loading="lazy"
+          >
+        </div>
+        <div class="rank-decoration" aria-label="Rank 11">
+          <div class="laurel left">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <span class="rank-number">11</span>
+          <div class="laurel">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 class="contestant-name">Mia Donadio</h3>
+        <p class="country-name">Cuba</p>
+      </div>
+    </article>
+
+    <!-- TOP 12 : FRANCE -->
+    <article class="contestant-card">
+      <div>
+        <div class="photo-frame">
+          <img
+            src="images/863720010_17905433640598103_8621632553916484477_n.jpg"
+            alt="Garance Authié - France"
+            loading="lazy"
+          >
+        </div>
+        <div class="rank-decoration" aria-label="Rank 12">
+          <div class="laurel left">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <span class="rank-number">12</span>
+          <div class="laurel">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 class="contestant-name">Garance Authié</h3>
+        <p class="country-name">France</p>
+      </div>
+    </article>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer-title">VOTE YOUR FAVOURITE ON TIKTOK</p>
+
+    <a
+      class="tiktok-link"
+      href="https://www.tiktok.com/@Jayson_Crystal"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      @Jayson_Crystal
+    </a>
+
+    <p class="disclaimer">
+      This Not The Official Miss Universe Voting Page It Just A Show Power Country.
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>
